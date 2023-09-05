@@ -1,0 +1,14 @@
+1)write a query to display employee naseme salary and higher dATE of employee
+
+	SELECT ENAME,SAL,HIREDATE
+	FROM EMP;
+
+2) Write a query to display the department name from department table
+
+	SELECT DEPTNO
+	FROM DEPT;
+
+3) Write a query to display the employee name salary commission and designation from employable table
+
+	SELECT ENAME,SAL,COMM,JOB
+	FROM EMP;
