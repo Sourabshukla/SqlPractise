@@ -1,0 +1,49 @@
+9) Write a query to display the details of employee who are working in department 10 or 30 as manager or analyst
+
+	 SELECT * FROM EMP
+ 	 WHERE DEPTNO IN (10,30) AND  JOB IN ('MANAGER', ' ANALYST');
+
+10)  Write a query to display of employee save the employee working as salesman or manager department number 	10 or 20 except employee number 7788 and 7756
+		
+
+ 	SELECT  * FROM EMP
+	 WHERE JOB IN('SALESMAN' , 'MANAGER') AND DEPTNO IN (10,20) AND EMPNO NOT IN (7788,7566);
+
+	EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+	----- ---------- --------- ---------- --------- ---------- ---------- ----------
+	 7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+
+
+11) Write a query to display the details of employee a firm working as salesman or analyst and getting salary between 1500 and 3000
+
+
+	 SELECT * FROM EMP
+ 	 WHERE JOB IN ('SALESMAN','ANALYST')  AND SAL BETWEEN 1500 AND 3000;
+
+    EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+--------- ---------- --------- ---------- --------- ---------- ---------- ----------
+     7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+     7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+     7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+     7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+
+12) Write a query to display the employee name job higher date is the employee working as salesman or clerk except who were hired during the year 87
+
+
+SQL> SELECT ENAME,JOB,HIREDATE
+  2  FROM EMP
+  3  WHERE JOB IN ('SALESMAN','CLERK') AND HIREDATE NOT BETWEEN '01-JAN-87' AND '31-DEC-87';
+
+ENAME      JOB       HIREDATE
+---------- --------- ---------
+SMITH      CLERK     17-DEC-80
+ALLEN      SALESMAN  20-FEB-81
+WARD       SALESMAN  22-FEB-81
+MARTIN     SALESMAN  28-SEP-81
+TURNER     SALESMAN  08-SEP-81
+JAMES      CLERK     03-DEC-81
+MILLER     CLERK     23-JAN-82
+
+7 rows selected.
+
