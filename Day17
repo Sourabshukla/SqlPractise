@@ -1,0 +1,26 @@
+13) Write a query to display employee name salary higher date annual salary of employee if the employee name second last character is E AND SAL ENDS WITH 0
+
+SQL>  SELECT ENAME , SAL,HIREDATE,SAL*12 FROM EMP
+  2       WHERE ENAME LIKE '%E_'  AND SAL LIKE '___0';
+
+ENAME             SAL HIREDATE      SAL*12
+---------- ---------- --------- ----------
+ALLEN            1600 20-FEB-81      19200
+TURNER           1500 08-SEP-81      18000
+MILLER           1300 23-JAN-82      15600
+
+
+
+14) Write a query to display the employee name higher date if the higher date in the month of November and December
+
+
+
+SQL> SELECT ENAME, HIREDATE FROM EMP
+  2  WHERE HIREDATE LIKE '%NOV%' OR HIREDATE LIKE '%DEC%';
+
+ENAME      HIREDATE
+---------- ---------
+SMITH      17-DEC-80
+KING       17-NOV-81
+JAMES      03-DEC-81
+FORD       03-DEC-81
