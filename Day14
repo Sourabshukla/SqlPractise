@@ -7,7 +7,7 @@
 		
 
  	SELECT  * FROM EMP
-	 WHERE JOB IN('SALESMAN' , 'MANAGER') AND DEPTNO IN (10,20) AND EMPNO NOT IN (7788,7566);
+	 WHERE JOB IN('SALESMAN' ,'MANAGER') AND DEPTNO IN (10,20) AND EMPNO NOT IN (7788,7566);
 
 	EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 	----- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -33,7 +33,7 @@
 
 SQL> SELECT ENAME,JOB,HIREDATE
   2  FROM EMP
-  3  WHERE JOB IN ('SALESMAN','CLERK') AND HIREDATE NOT BETWEEN '01-JAN-87' AND '31-DEC-87';
+  3  WHERE JOB IN ('SALESMAN','CLERK') AND HIREDATE NOT BETWEEN '01-JAN-87' AND '31-DEC-87' ;
 
 ENAME      JOB       HIREDATE
 ---------- --------- ---------
