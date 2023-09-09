@@ -3,7 +3,7 @@
 	 SELECT * FROM EMP
  	 WHERE DEPTNO IN (10,30) AND  JOB IN ('MANAGER', ' ANALYST');
 
-10)  Write a query to display of employee save the employee working as salesman or manager department number 	10 or 20 except employee number 7788 and 7756
+10) Write a query to display of employee save the employee working as salesman or manager department number 	10 or 20 except employee number 7788 and 7756
 		
 
  	SELECT  * FROM EMP
